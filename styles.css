@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*generalised styling for elements */
+
+h1, h2, h3 {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    color: hsl(210, 10%, 33%);
+}
+
+p {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: hsl(201, 11%, 70%);
+    padding-bottom: 1.5rem;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1em;
+    width: 90%;
+    color: #FFF;
+}
+
+img {
+    max-width: 90%;
+}
+
+section {
+    padding: 2em;
+    padding-bottom: 5em;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   background-color: #F5F6F8;
+   padding-top: 2em;
+   padding-bottom: 2em;
+
+}
+
+
+
+
+/* styling for classes */
+
+.hero {
+    background-image:url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+} 
+    
+    
+
+.button__ios {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 0.25em 0.5em 0.25em hsl(171, 66%, 90%);
+    border: none;
+
+}
+
+.button__mac {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 0.25em 0.5em 0.25em hsl(233, 100%, 90%);
+    border: none;
+}
+
+.button__ios:hover {
+    cursor: pointer;
+    background-color: hsl(171, 66%, 60%);
+}
+
+.button__mac:hover {
+    cursor: pointer;
+    background-color: hsl(233, 100%, 80%);
+}
+
+
+.logo {
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+.logo__footer {
+    max-width: 3em;
+    margin-bottom: 1.5em;
+}
+
+.social__media__icons {
+    display: flex;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+.partner__logo {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em;
+    min-width: 12em;
+}
+
+.footer p {
+    color: hsl(210, 10%, 33%);
+    font-size: 1.1em;
+    font-weight: 450;
+
+}
+
+/* destkop styling */
+
+@media (min-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .hero {
+        background-image:url(./images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        
+    } 
+
+    button {
+        max-width: 15em;
+        display: inline-block;
+        margin-left: 1em;
+    }
+
+
+    .section__snippets img {
+        float: left;
+        margin-right: 5em;
+        max-width: 100%;
+    }
+
+    .subheading {
+ 
+        display: flex;
+        justify-content: center;
+        padding-left: 25em;
+        padding-right: 25em;
+        
+    }
+
+
+    /* so that the snippets align with photo */
+    .snippets__container {
+        padding-top: 1.5em;
+        padding-right: 10em;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .snippets__container p {
+
+        margin-top: 0;
+    }
+
+
+        /* group each USP with it's image and heading */
+    .usp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 20em;
+    }
+
+    .usp img {
+        max-width: 10%;
+    }
+
+        /* put the USP's in a row */
+    .usp__container {
+        display: flex;
+        margin-top: 3em;
+        margin-right: 10em;
+        margin-left: 10em;
+        gap: 2em;
+    }
+
+    .section__logos {
+        display: flex;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .links__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "faq privacy install"
+            "contact press .";
+        gap: 0 1em;
+    }
+
+    .faq { grid-area: faq; }
+    .contact { grid-area: contact; }
+    .privacy { grid-area: privacy; }
+    .press { grid-area: press; }
+    .install { grid-area: install; }
+
+    .links__container p {
+        padding-bottom: 0em;
+    }
+
+    .social__media__icons {
+        margin-right: 5em;
+    }
+
+    .logo__footer {
+        margin-left: 5em;
+    }
+
+
+}
